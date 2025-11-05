@@ -24,6 +24,9 @@
     "build-l5": "slidev build --out dist-l5 --base /slides/l5/ l5-application.md",
     "dev-l5": "slidev l5-application.md",
     "export-l5": "slidev export l5-application.md",
+    "build-l6": "slidev build --out dist-l6 --base /slides/l6/ l6-ipv6.md",
+    "dev-l6": "slidev l6-ipv6.md",
+    "export-l6": "slidev export l6-ipv6.md",
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export"
