@@ -50,11 +50,11 @@
 
 ## Konfigurácia interfacov / Interface Configuration
 
-### Konfigurácia jedného interface
+### Konfigurácia jedného interface / Configuration of an interface
 
     Router(config)# interface <interface> <interface-num>
 
-### Konfigurácia viacerých interface naraz
+### Konfigurácia viacerých interface naraz / Configuration of multiple interfaces at once
 
     Router(config)# interface range <interface> <interface-start>-<interface-end>
 
@@ -62,23 +62,23 @@ Example:
 
     Router(config)# interface range fa0/1-24
 
-### IPv4 adresa
+### Nastavenie IPv4 adresy / IPv4 address configuration
 
     Router(config-if)# ip address <ip-address> <mask>
 
-### IPv6 GUA adresa
+### Nastavenie IPv6 GUA adresy / IPv6 GUA address configuration
 
     Router(config-if)# ipv6 address <ipv6-GUA-address>/<prefix-length>
 
-### IPv6 link-local adresa
+### Nastavenie IPv6 link-local adresy / IPv6 link-local address configuration
 
     Router(config-if)# ipv6 address <ipv6-LL-address> link-local
 
-### Description
+### Nastavenie description / Interface description configuration
 
     Router(config-if)# description <description>
 
-### Aktivácia portu
+### Aktivácia portu / Bring interface up
 
     Router(config-if)# no shutdown
 
@@ -90,13 +90,13 @@ Example:
 
 ------------------------------------------------------------------------
 
-## Nastavenie statickej cesty / Static Routes
+## Nastavenie statickej cesty / Configure static routes
 
-### IPv4 statická cesta
+### IPv4
 
     Router(config)# ip route <dest-ip> <dest-mask> <next-hop-ip>
 
-### IPv6 statická cesta
+### IPv6
 
     Router(config)# ipv6 route <dest-prefix>/<prefix-length> <next-hop-ip>
 
@@ -114,7 +114,7 @@ Example:
 
 ------------------------------------------------------------------------
 
-## Verifikačné a diagnostické príkazy / Verification & Diagnostics
+## Verifikačné & diagnostické príkazy / Verification & diagnostic commands
 
     Router/Switch# ping <ip-addr>
     Router/Switch# traceroute <ip-addr>
