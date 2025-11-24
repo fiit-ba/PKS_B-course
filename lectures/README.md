@@ -41,3 +41,4 @@ Refer to the [Slidev guides](https://sli.dev/guide/) for more commands and synta
 | 4.      | [Transport Layer - TCP](https://drive.google.com/file/d/1toR3lsMzBS6XfbLQlSyi9EOMLbMF-1kZ/view?usp=sharing) |
 | 5.      | [Application Layer](https://drive.google.com/file/d/1oQ8kZJ_EOfg8IOpZU5dQSLWA-v9D59-o/view?usp=sharing) |
 | 6.      | [IPv6](https://drive.google.com/file/d/1ws_x5WGXzh96zpWptOaQNdo_vrbgti5x/view?usp=sharing) |
+| 7.      | [Physical Layer](https://drive.google.com/file/d/1WpAyLmxQW320ywyJKwG5qibcqjzVzpm7/view?usp=sharing) |
