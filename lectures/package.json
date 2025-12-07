@@ -27,6 +27,9 @@
     "build-l6": "slidev build --out dist-l6 --base /slides/l6/ l6-ipv6.md",
     "dev-l6": "slidev l6-ipv6.md",
     "export-l6": "slidev export l6-ipv6.md",
+    "build-l8": "slidev build --out dist-l8 --base /slides/l8/ l8-routing.md",
+    "dev-l8": "slidev l8-routing.md",
+    "export-l8": "slidev export l8-routing.md",
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export"
