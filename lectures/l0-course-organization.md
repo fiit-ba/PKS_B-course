@@ -12,7 +12,7 @@ layout: cover
 title: 'Computer and Communication Networks: Course Organization'
 ---
 
-# Computer and Communication Networks : Course Organization
+# Computer and Communication Networks : Course Organization 2026/2027
 
 ---
 layout: default
@@ -93,50 +93,50 @@ layout: default
   </div>
 
   <div>
-    <img src="./images/kk.jpg" />
-    <p class="name">doc. Ing. Kristián Košťál, PhD.</p>
-    <p class="title">Senior cvičiaci</p>
-    <p class="title"><a href="mailto:kristian.kostal@stuba.sk">kristian.kostal@stuba.sk</a></p>
-  </div>
-
-  <div>
-    <img src="./images/mj.jpg" />
-    <p class="name">Ing. Matej Janeba</p>
-    <p class="title">Senior cvičiaci / Zodpovedný za zadanie</p>
-    <p class="title"><a href="mailto:matej.janeba@stuba.sk">matej.janeba@stuba.sk</a></p>
-  </div>
-
-  <div>
     <img src="./images/mm.jpg" />
     <p class="name">Ing. Matúš Mikuláš</p>
-    <p class="title">Senior cvičiaci / Zodpovedný za CCNA kurzy</p>
-    <p class="title"><a href="mailto: matus.mikulas@stuba.sk"> matus.mikulas@stuba.sk</a></p>
+    <p class="title">Senior cvičiaci / CCNA kurzy</p>
+    <p class="title"><a href="mailto:matus.mikulas@stuba.sk">matus.mikulas@stuba.sk</a></p>
+  </div>
+
+  <div>
+    <img src="" />
+    <p class="name">Bc. Július Škrabák</p>
+    <p class="title">Junior cvičiaci(OPP)</p>
+    <p class="title"><a href="mailto:julius.skrabak@stuba.sk">julius.skrabak@stuba.sk</a></p>
+  </div>
+
+  <div>
+    <img src="" />
+    <p class="name">Bc. Kristián Kapec</p>
+    <p class="title">Junior cvičiaci(OPP)</p>
+    <p class="title"><a href="mailto:xkapeck@stuba.sk">xkapeck@stuba.sk</a></p>
   </div>
 </div>
 <br>
 <div class="team-grid">
   <div>
-    <p class="name">Bc. Patrik Boržík</p>
+    <p class="name">Bc. Andrei Vlad Danilov</p>
     <p class="title">Junior cvičiaci(OPP)</p>
-    <p class="title"><a href="mailto:xborzik@stuba.sk">xborzik@stuba.sk</a></p>
+    <p class="title"><a href="mailto:xdanilov@stuba.sk">xdanilov@stuba.sk</a></p>
   </div>
 
   <div>
-    <p class="name">Bc. Tomáš Jágerský</p>
+    <p class="name">Bc. Filip Hromada</p>
     <p class="title">Junior cvičiaci(OPP)</p>
-    <p class="title"><a href="mailto:xjagerskyt@stuba.sk">xjagerskyt@stuba.sk</a></p>
+    <p class="title"><a href="mailto:xhromadaf@stuba.sk">xhromadaf@stuba.sk</a></p>
   </div>
 
   <div>
-    <p class="name">Bc. Martin Kačáni</p>
+    <p class="name">Bc. Martin Podmanický</p>
     <p class="title">Junior cvičiaci(OPP)</p>
-    <p class="title"><a href="mailto:xkacani@stuba.sk">xkacani@stuba.sk</a></p>
+    <p class="title"><a href="mailto:xpodmanickym@stuba.sk">xpodmanickym@stuba.sk</a></p>
   </div>
 
   <div>
-    <p class="name">Bc. Matúš Makay</p>
+    <p class="name">Bc. Roman Gajdoš</p>
     <p class="title">Junior cvičiaci(OPP)</p>
-    <p class="title"><a href="mailto:xmakay@stuba.sk">xmakay@stuba.sk</a></p>
+    <p class="title"><a href="mailto:xgajdosr@stuba.sk">xgajdosr@stuba.sk</a></p>
   </div>
 </div>
 ---
@@ -152,7 +152,7 @@ layout: default
 |               | **Body** | **Min.** |
 |---------------|------|------|
 | Semester      | 50   |      |
-| Skúška        | 50   |      |
+| Skúška        | 50   |   <span style="color:red;">25</span>   |
 | **Spolu**     | **100**  |   <span style="color:red;">56</span>    |
 
 ----
@@ -176,42 +176,49 @@ layout: default
 | **Semester**      | **Body** | **Min.** |
 |---------------|------|------|
 | Zadanie - prvá časť      | 5    |  <span style="color:red;">2,5</span>     |
-| Zadanie - druhá časť     | 15   |  <span style="color:red;">7</span>     |
+| Zadanie - druhá časť     | 15   |  <span style="color:red;">7,5</span>     |
 | Test-analýza, subnetting | 15   |  <span style="color:red;">7,5</span>   |
 | Test-troubleshooting     | 15   |  <span style="color:red;">7,5</span>   |
 | **Spolu**                | 50   |      |
 
 ---
 
+# Opravný test
+
+- Študent si môže **opraviť jeden test**, pri ktorom nezískal minimálny počet bodov.
+- Zároveň, študent musí získať minimálny počet bodov z druhého testu v riadnom termíne.
+- Za opravný test sa započíta iba 50 % získaných bodov, ktoré nahradia pôvodný (nedostatočný) výsledok.
+- Opravný test sa píše v 13. týždni.
+ 
+---
+
 # Podmienky na absolvovanie predmetu
 
 | **Skúška**       | **Body** | **Min.** |
 |---------------|------|------|
-| AIS časť      | -   |  <span style="color:red;">50%</span>    |
-| Písomná časť  | -  |  <span style="color:red;">50%</span>    |
-| **Spolu**     | 50   |      |
+| Písomná  | 50  |  <span style="color:red;">25</span>    |
 
 ---
 
 # Harmonogram
 
 
-<div style="font-size:0.7rem; width:100%; margin:auto; line-height:0.5rem;">
+<div style="font-size:0.65rem; width:100%; margin:auto; line-height:0.5rem;">
 
-| Week | Lecture | Prerequisites for laboratory practice | Checkpoint |
-|-------|------|------|-|
-| 1.    | Podmienky, Úvod do sietí | [Getting Started with Cisco Packet Tracer](https://teams.microsoft.com/l/message/19:8f1ebf5266ca4ba89a80534596911416@thread.tacv2/1758543921724?tenantId=25733538-6b16-4aa3-8ed6-297eb79b8e06&groupId=ce1f0209-00aa-4ad5-8448-8248bc3fcc0c&parentMessageId=1758543921724&teamName=FIIT%20PKS_B%20-%202025%2F26&channelName=Exercises&createdTime=1758543921724) |      |
-| 2.    | Linková vrstva   | [Network Frame Analysis (video)](https://drive.google.com/file/d/1vityK8UtP-296iOVYId-_p-qnFaIBTMK/view?ts=64dcaf9f) | |
-| 3.    | Predstavenie zadania + Sieťová vrstva  | [Subnetting (video)](https://drive.google.com/file/d/1mLHNj-5seiWVfcY2U9qzWvR66G4qZYS3/view?usp=drive_link)     | |
-| 4.    | Transportná vrstva - UDP, Úvod do TCP    |      | |
-| 5.    | Transportná vrstva - TCP | | <span style="color:red;">Test - analýza rámcov a subnetting</span> |
-| 6.    | Aplikačná vrstva - služby | | <span style="color:red;">Odovzdanie a preberanie 1. časti zadania</span> |
-| 7.    | IPv6   |   | |
-| 8.    | Fyzická vrstva, Prístupové metódy na linkovej vrstve  | | |
-| 9.    | Smerovacie algoritmy   |  | <span style="color:red;">Test - Troubleshooting</span> |
-| 10.   | QUIC |      | |
-| 11.   | Mobilné a bezdrotové siete | | <span style="color:red;">Odovzdanie, domimplementácia a preberanie 2. časti zadania</span> |
-| 12.   | Bezpečnosť v sieťach     | | <span style="color:red;">Preberanie druhej časti zadania</span> |
+| Week | Date | Lecture | Laboratory practice | Milestones |
+|-------|------|------|------|-|
+| 1.  | 14/9/2026  | Intro | CLI, PT, rozhrania | |
+| 2.  | 21/9/2026  | Linková vrstva | Analýza rámcov, ARP (PT, Wireshark) | |
+| 3.  | 28/9/2026  | Sieťová vrstva | Subnetting (PT) | <span style="color:red;">Zverejnenie zadania</span> |
+| 4.  | 5/10/2026  | Úvod do transportnej vrstvy, Predstavenie zadania | UDP/TCP socket (Python) | |
+| 5.  | 12/10/2026 | TCP I. | | <span style="color:red;">Test - analýza rámcov, ARP, IP subnetting</span> |
+| 6.  | 19/10/2026 | TCP II. | Zadanie KB | |
+| 7.  | 26/10/2026 | Aplikačná vrstva | Troubleshooting (PT) | |
+| 8.  | 2/11/2026  | IPv6 | IPv6 konfigurácia (PT) | |
+| 9.  | 9/11/2026  | Smerovanie | | <span style="color:red;">Test - Troubleshooting</span> |
+| 10. | 16/11/2026 | Fyzická vrstva | ??? | |
+| 11. | 23/11/2026 | Mobilná sieť, WiFi, Bluetooth| Doimplementácia zadania | <span style="color:red;">Preberanie zadania</span> |
+| 12. | 30/11/2026 | Bezpečnosť | | <span style="color:red;">Preberanie zadania</span> |
 </div>
 
 ---
@@ -226,7 +233,7 @@ layout: default
 <br>
 <br>
 <div class="text-4xl font-bold text-blue-500">
-  <a href="https://teams.microsoft.com/l/team/19%3AKJ4EsR3qV-_c4xuT_Ncwdw15YpUFWjjgruTca0PoM5g1%40thread.tacv2/conversations?groupId=ce1f0209-00aa-4ad5-8448-8248bc3fcc0c&tenantId=25733538-6b16-4aa3-8ed6-297eb79b8e06" target="_blank" rel="noopener">
+  <a href="https://teams.cloud.microsoft/l/team/19%3ABRiMzh9RfQpSqoOVo45QF9sqx5SFnFlrxEUv4Eqw2k41%40thread.tacv2/conversations?groupId=87e8632d-6b05-432e-a1d9-b33850f6fb36&tenantId=25733538-6b16-4aa3-8ed6-297eb79b8e06" target="_blank" rel="noopener">
     💬 MS Teams
   </a>
 </div>
@@ -270,8 +277,8 @@ layout: default
   <p><strong>Predvytvorené kanály:</strong></p>
   <ul>
     <li><strong>General</strong> – pre otázky, ktoré nepatria do obsahu žiadneho iného kanála</li>
-    <li><strong>QA assignment</strong> – pre otázky na zadanie (sleduje kolega Matej)</li>
-    <li><strong>CCNA course</strong> – pre všetky otázky a informácie, ktoré sa týkajú CCNA kurzov (sleduje kolega Matúš)</li>
+    <li><strong>QA assignment</strong> – pre otázky na zadanie </li>
+    <li><strong>CCNA preskušanie </strong> – pre otázky a informácie, ktoré sa týkajú preskúšania tých, čo už majú CCNA kurz</li>
   </ul>
 </div>
 </v-click>
@@ -289,50 +296,38 @@ layout: default
 
 # Cisco Networking Academy FIIT STU v Bratislave
 
-Možnosť získať teoretické a praktické skúsenosti z oblasti sietí 
-
-Kompletne vynovené moderné vybavenie sieťových laboratórií (switche, routre, servery, PCs…)
-
-Cesta k medzinárone uznávanej certifikácií CCNA a jej ďalším stupňom 
-
-Viacero typov kurzov vedených skúsenými inštruktormi
+- Teoretické a praktické skúsenosti zo sietí
+- Moderné vybavenie laboratórií (switche, routre, servery, PCs)
+- Cesta k certifikácii CCNA a jej ďalším stupňom
+- Kurzy vedené skúsenými inštruktormi
+- Súbežný kurz pre študentov PKS sa počas tohto semestra **NEBUDE** realizovať.
+- Po absolvovaní PKS: skrátený kurz pre absolventov, CCNA 1 certifikát
 
 **Ponuka odborných kurzov:**
 - CCNA full certificate:
-  - CCNA 1 - Introduction to Networks
-  - CCNA 2 - Switching, Routing and Wireless Essentials
-  - CCNA 3 - Enterprise Networking, Security, and Automation
-- Cyberops - Cybersecurity
+  - CCNA 1: Introduction to Networks
+  - CCNA 2: Switching, Routing and Wireless Essentials
+  - CCNA 3: Enterprise Networking, Security, and Automation
+- Cyberops: Cybersecurity
+
 ---
 
-# Cisco Networking Academy FIIT STU v Bratislave
-
-**Čo to znamená pre vás ?**
-
-V prípade úspešného absolvovania skúšky CCNA 1:
-- zisk certifikácie CCNA 1 (prvý krok k veľkému certifikátu CCNA)
-- automatické absolvovanie skúšky z predmetu PKS 
-    - za predpokladu **úspešného získania zápočtu!**
-    - funguje ako zdvojnásobenie bodov zo semestra
-
-Možnosti:
-- CCNA plný kurz 
-- CCNA pre študentov PKS 
-- Existujúci CCNA certifikát
+# Cisco Networking Academy FIIT STU v Bratislave 
 
 Odkazy:
 - [Web - Cisco Networking Academy FIIT STU v Bratislave](http://netacad.fiit.stuba.sk)
 - [Linkedin - Cisco Networking Academy FIIT STU](https://www.linkedin.com/company/cisco-networking-academy-fiit-stu)
-
 ---
 
-# Cisco Networking Academy FIIT STU v Bratislave
+# Uznanie CCNA certifikátu ako náhrada skúšky
+- **CCNA 1 alebo vyššia úroveň, získaná najviac pred 3 rokmi.**
+- Poslať nám certifikát do **27. 9. 2026** podľa pokynov v [Google formulári](https://docs.google.com/forms/d/e/1FAIpQLSeiwkW11oHtiCy3hVKpwq4JMT3tY3hug6KngP4uBa4vG5U0KQ/viewform).
+- Prihlásiť sa na preskúšanie cez [Google formulár](https://docs.google.com/forms/d/e/1FAIpQLSeiwkW11oHtiCy3hVKpwq4JMT3tY3hug6KngP4uBa4vG5U0KQ/viewform) a úspešne ho absolvovať (1 pokus).
+- Získať zápočet z predmetu (podmienka pre priznanie bodov).
+- Po úspešnom preskúšaní ťa inštruktor nahlási vedeniu predmetu. Nemusíš sa zúčastniť skúšky a pri zápise bodov zo skúšky sa ti zapíše dvojnásobný počet bodov, ktoré si získal počas semestra (nie je od teba potrebná žiadna aktivita).
 
-Naskenujte QR kód s odkazom na Google formulár:
-- tu sú všetky dôležité informácie a kontakty
-- informácie budú tiež zverjenené na MS Teamse v kanáli **CCNA course**
+<img src="./images/qr-ccna.jpeg" class="h-55 mx-auto" />
 
-<img src="./images/ccna-qr-code.png" class="h-80 mx-auto object-cover" />
 ---
 
 # Akademická bezúhonnosť
@@ -346,10 +341,10 @@ Naskenujte QR kód s odkazom na Google formulár:
 </div>
 --- 
 
-# Čo je absolutne zakazané ?
+# Čo je absolutne zakázané ?
 
 - Písať kód na počítači niekoho iného.
 - Zverejňovať kód riešení akéhokoľvek zadania na verejnom mieste (napr. verejné Git úložisko a pod.). Toto platí aj po skončení semestra.
-- Odovzdáť alebo prezentovať kód riešenia projektu, ktorý ste sami nenapísali, alebo kód projektu iného študenta v akejkoľvek forme.
+- Odovzdať alebo prezentovať kód riešenia projektu, ktorý ste sami nenapísali, alebo kód projektu iného študenta v akejkoľvek forme.
 - Nechávať svoj kód na nebezpečnom mieste tak, aby si ho mohli iní študenti zobrať a použiť (aj keď sa to stane bez vášho vedomia).
-- Používať automatické generátory kódu ako ChatGPT, GitHub Copilot alebo iné podobné nástroje bez označenia častí kódov, ktoré boli pomocou nich generované.
+- Používať automatické generátory kódu ako ChatGPT, GitHub Copilot alebo iné podobné nástroje bez označenia častí kódu, ktoré boli pomocou nich vygenerované. **Cvičiaci sa môže pýtať na vysvetlenie akejkoľvek časti kódu, a v prípade, že študent nevie jasne vysvetliť, čo kód robí, môže cvičiaci hodnotiť splnenie danej úlohy nižším počtom bodov.**
