@@ -12,7 +12,7 @@ layout: cover
 title: 'Computer and Communication Networks: Network'
 ---
 
-# Computer and Communication Networks : Network
+# Computer and Communication Networks: Network
 
 Lecture 3
 
@@ -22,6 +22,7 @@ layout: default
 
 # Content overview
 
+- Recap
 - Network Layer
 - IPv4 Address
 - Types of IPv4 Addresses
@@ -31,12 +32,41 @@ layout: default
 - Introduction to Routing
 - ARP (Cont.)
 - Network Address Translation (NAT)
-- What’s inside a router
+---
+layout: three-slots
+---
+
+# Recap: link layer services
+
+::left::
+
+- Framing and link access: wraps the datagram in a frame, manages access to a shared medium.
+- Addressing: MAC addresses identify source and destination on the local link.
+- Error detection: catches bit errors introduced by the physical medium.
+
+::right::
+
+<img src="./images/l2-services1.png" class="pr-30 h-90 float-right" />
+---
+
+# Recap: Ethernet
+
+<img src="./images/l2-frame-format.png" class="pt-20 h-40 float-right" />
+
+---
+
+# Recap: MAC addresses and ARP
+
+A MAC address identifies a device on the local link, flat and not tied to the network topology, unlike an IP address.
+
+ARP maps an IP address to a MAC address, so a frame can actually be delivered on the LAN.
+
+<img src="./images/l2-arp.png" class="pt-5 h-70 mx-auto" />
 ---
 layout: section
 ---
 
-# Network Layer
+# Network layer
 ---
 
 # Services and protocols
@@ -49,14 +79,14 @@ The network layer performs operations:
 
 <v-click>
 
-- **addressing** end devices
+- **Addressing** end devices
   - Every device on a network is assigned an IP address.
   - This IP address is logical, not tied to the hardware (unlike MAC at Layer 2).
   - It allows communication between networks (not just within the same LAN).
 </v-click>
 <v-click>
 
-- **encapsulation** 
+- **Encapsulation**
   - A sender encapsulates layer 4 segments into packets, passes to link layer.
   - IP can use either an IPv4 or IPv6 packet and not impact the layer 4 segment.
   - IP packet will be examined by all layer 3 devices as it traverses the network.
@@ -72,126 +102,133 @@ The network layer performs operations:
 
 <v-click>
 
-- **de-encapsulation**
-  - A receiver delivers packets to transport layer protocol
+- **De-encapsulation**
+  - A receiver delivers packets to transport layer protocol.
 </v-click>
 <v-click>
 
-- **routing** (only router)
+- **Routing** (only router)
   - Determines the path packets take from source to destination using routing algorithms.
   - Analogy: taking a trip -> process of planning trip from source to destination.
 </v-click>
 <v-click>
 
-- **forwarding** (only router)
+- **Forwarding** (only router)
   - Moves packets from a device’s input interface to the appropriate output interface.
   - Analogy: taking a trip -> process of getting through single interchange.
-</v-click>
---- 
 
-# Characteristics - Connectionless
+Routing and forwarding work together: routing plans the whole trip in advance, forwarding executes one turn of it at a time, at every router along the way.
+</v-click>
+---
+
+# Characteristics: connectionless
 
 - IP does not establish a connection with the destination before sending the packet.
-- There is no control information needed (synchronizations, acknowledgments, etc.)
+- There is no control information needed (synchronizations, acknowledgments, etc.).
 - The destination will receive the packet when it arrives, but no pre-notifications are sent by IP.
 - If there is a need for connection-oriented traffic, then another protocol will handle this (typically TCP at the transport layer).
 ---
 
-# Characteristics - Best Effort
+# Characteristics: best effort
 
 - IP will not guarantee delivery of the packet.
 - IP has reduced overhead since there is no mechanism to resend data that is not received.
 - IP does not expect acknowledgments.
 - IP does not know if the other device is operational or if it received the packet.
+
+This is the same tradeoff as connectionless delivery: IP stays simple and fast, and leaves reliability to a higher layer that actually needs it.
 ---
 
-# Characteristics - Media Independent
+# Characteristics: media independent
 
 <img src="./images/l3-media-independent.png" class="pt-15 h-53 float-right" />
 
-IP is **unreliable**:  
-  - It cannot manage or fix undelivered or corrupt packets.
-  - IP cannot retransmit after an error.
-  - IP cannot realign out of sequence packets.
-  - IP must rely on other protocols for these functions.
+IP is **unreliable**:
+  - We've already seen why (connectionless, best effort). It relies on higher protocols like TCP when reliability actually matters.
 
 IP is **media independent**:
   - IP does not concern itself with the type of frame required at the data link layer or the media type at the physical layer.
   - IP can be sent over any media type: copper, fiber, or wireless.
-  - The network layer will establish the Maximum Transmission Unit (MTU).
-    - Network layer receives this from control information sent by the data link layer.
-    - The network then establishes the MTU size.
+  - The **Maximum Transmission Unit** (MTU) is set by the data link layer below. Different media have different limits (e.g. Ethernet's 1500 bytes, which you already saw in the previous lecture).
+  - In IPv4, if a packet is larger than the MTU of the link it needs to cross, it gets fragmented along the way. IPv6 handles this differently: routers never fragment. A router drops a packet that is too big and tells the source (ICMPv6 "Packet Too Big"), and the source sends smaller packets.
 ---
 
-# IPv4 Packet Header Format
+# IPv4 packet header format
 
 <img src="./images/l3-ip-header.png" class="pt-10 h-90" />
 
 ---
 
-# IPv4 Packet Header Fields
+# IPv4 packet header fields
 
-Significant fields in the IPv4 header:
-
-- **Version** -> This will be for v4, as opposed to v6, a 4 bit field= 0100.
-- **Header Length** -> Header Length as there can be options. Typical value 5 without options (32bit words ).
-- **Total Length** -> Size of entire IP packet including header. Can go up to 65535 bytes.
-- **Differentiated Services** -> Used for QoS: DiffServ – DS field or the older IntServ – ToS or Type of Service.
-- **Header Checksum** -> Detect corruption in the IPv4 header.
-- **Time to Live (TTL)** -> Layer 3 hop count. When it becomes zero the router will discard the packet.
-- **Protocol** -> I.D.s next level protocol: ICMP, TCP, UDP, etc.
-- **Source IPv4 Address** -> 32 bit source address.
-- **Destination IPV4 Address** -> 32 bit destination address.
+- **Version** -> 4 bits, value 4 (0100) for IPv4.
+- **Header Length** -> Header size in 32 bit words: 5 (20 bytes) without options, up to 15 (60 bytes) with them.
+- **Type of Service (ToS)** -> QoS. Today Differentiated Services: 6 bit DSCP (priority) + 2 bit ECN (congestion).
+- **Total Length** -> Size of the whole packet including header, max 65535 bytes.
+- **Identification, Flags, Fragment Offset** -> Fragmentation: fragments share one ID, MF = more fragments follow, DF = don't fragment, offset = position for reassembly.
+- **Time to Live (TTL)** -> Decremented by each router, packet dropped at 0, so it can't loop forever. The router then sends an ICMP Time Exceeded message back to the source, which is how `traceroute` works.
+- **Protocol** -> Protocol in the payload: 1 = ICMP, 6 = TCP, 17 = UDP.
+- **Header Checksum** -> Detects errors in the header only (unlike FCS at Layer 2, which covers the whole frame). Recomputed by every router, since TTL changes at each hop.
+- **Source / Destination IPv4 Address** -> 32 bits each.
+- **Options** -> Optional and rarely used (e.g. Record Route), extend the header beyond 20 bytes.
 ---
 layout: section
 ---
 
-# IPv4 Address
+# IPv4 address
 ---
 
-# Network and Host Portions
+# Network and host portions
 
-An IPv4 address is a 32-bit hierarchical address that is made up of a network portion and a host portion. 
+An IPv4 address is a 32-bit hierarchical address that is made up of a network portion and a host portion.
 
-A subnet mask is used to determine the network and host portions. 
+A subnet mask is used to determine the network and host portions.
 
 The subnet mask is compared to the IPv4 address bit for bit, from left to right.
 
 <img src="./images/l3-ip-address.png" class="pt-5 h-80" />
 ---
 
-# The Prefix Length
+# The prefix length
 
 A prefix length is a less cumbersome method used to identify a subnet mask address.
 
-The prefix length is the number of bits set to 1 in the subnet mask. 
+The prefix length is the number of bits set to 1 in the subnet mask.
 
-It is written in **“slash notation”** therefore, count the number of bits in the subnet mask and prepend it with **/** .
-<img src="./images/l3-prefix-length.png" class="pl-60 pb-0 h-80" />
+It is written in **"slash notation"** therefore, count the number of bits in the subnet mask and prepend it with **/** .
+
+Example: 255.255.255.0 has 24 bits set to 1, so its prefix length is **/24**. Both notations describe the exact same mask.
+<img src="./images/l3-prefix-length.png" class="pl-60 pb-0 h-65" />
 ---
 
-# Network, Host, and Broadcast Addresses
+# Network, host, and broadcast addresses
 
 Within each network are three types of IP addresses:
-- Network address
-- Host addresses
-- Broadcast address
+- Network address: all host bits set to 0, identifies the network itself
+- Host addresses: everything between the network and broadcast address, assignable to devices
+- Broadcast address: all host bits set to 1, reaches every device on that network
 
 <img src="./images/l3-subnet.png" class="pt-5 h-55 float-left" />
 <img src="./images/l3-type-address.png" class="pl-0 h-60 float-right" />
 ---
 
-# Unicast, Broadcast, and Multicast
+# Unicast, broadcast, and multicast
+
+Same three patterns you saw at Layer 2 with MAC addresses, now at Layer 3 with IP addresses.
+
+- **Unicast:** one sender, one specific receiver
+- **Broadcast:** one sender, every host on the local network (the .255 address you just saw)
+- **Multicast:** one sender, a specific group of receivers who chose to join
 
 <img src="./images/l3-type-communication.png" class="pt-5 h-55" />
 ---
 layout: section
 ---
 
-# Types of IPv4 Addresses
+# Types of IPv4 addresses
 ---
 
-# Assignment of IP Addresses
+# Assignment of IP addresses
 
 The Internet Assigned Numbers Authority (IANA) manages and allocates blocks of IPv4 and IPv6 addresses to five Regional Internet Registries (RIRs). 
 
@@ -203,16 +240,16 @@ RIRs are responsible for allocating IP addresses to ISPs who provide IPv4 addres
 layout: three-slots
 ---
 
-# Legacy Classful Addressing
+# Legacy classful addressing
 
 ::left::
 
 RFC 790 (1981) allocated IPv4 addresses in classes:
 - Class **A (0.0.0.0/8 to 127.0.0.0/8)**
-- Class **B (128.0.0.0 /16 – 191.255.0.0 /16)**
-- Class **C (192.0.0.0 /24 – 223.255.255.0 /24)**
-- Class **D (224.0.0.0 to 239.0.0.0)**
-- Class **E (240.0.0.0 – 255.0.0.0)**
+- Class **B (128.0.0.0 /16 - 191.255.0.0 /16)**
+- Class **C (192.0.0.0 /24 - 223.255.255.0 /24)**
+- Class **D (224.0.0.0 - 239.255.255.255)**
+- Class **E (240.0.0.0 - 255.255.255.255)**
 
 Classful addressing wasted many IPv4 addresses.
 
@@ -228,7 +265,7 @@ Class B -> networks: 16 384 and hosts: 65 534
 Class C -> networks: 2 097 152 and hosts: 254
 ---
 
-# Public and Private IPv4 Addresses (RFC 1918)
+# Public and private IPv4 addresses (RFC 1918)
 
 **Public addresses** are globally routed between internet service provider (ISP) routers. 
 
@@ -247,7 +284,7 @@ Class C -> networks: 2 097 152 and hosts: 254
 
 ---
 
-#  Special Use IPv4 Addresses
+# Special use IPv4 addresses
 
 **Loopback addresses:**
 - 127.0.0.0 /8 (127.0.0.1 to 127.255.255.254)
@@ -257,15 +294,16 @@ Class C -> networks: 2 097 152 and hosts: 254
 **Link-Local addresses:**
 - 169.254.0.0 /16 (169.254.0.1 to 169.254.255.254)
 - Commonly known as the Automatic Private IP Addressing (APIPA) addresses or self-assigned addresses. 
-- Used by Windows DHCP clients to self-configure when no DHCP servers are available.
+- Used by DHCP clients to self-configure when no DHCP server is available. This isn't Windows-specific, the underlying mechanism (RFC 3927) exists on macOS and Linux too.
+- If a host has a 169.254.x.x address, that's a signal something's wrong. It never got a DHCP response, and without a real address it has no way to reach a default gateway either.
 ---
 layout: section
 ---
 
-# Network Segmentation
+# Network segmentation
 ---
 
-# Broadcast Domains and Segmentation
+# Broadcast domains and segmentation
 
 Many protocols use broadcasts or multicasts (e.g., ARP use broadcasts to locate other devices, hosts send DHCP discover broadcasts to locate a DHCP server.)
 
@@ -274,15 +312,18 @@ Switches propagate broadcasts out all interfaces except the interface on which i
 The only device that stops broadcasts is a router, because routers do not propagate broadcasts. 
 
 Each router interface connects to a broadcast domain and broadcasts are only propagated within that specific broadcast domain.
-<img src="./images/l3-broadcast-domain.png" class="pt-0 pl-45 h-60" />
+
+*Note: This is similar to the collision domain concept from the previous lecture: a boundary that limits how far something can spread. A switch separates collision domains; a router separates broadcast domains.*
+
+<img src="./images/l3-broadcast-domain.png" class="pt-0 pl-70 h-40" />
 ---
 layout: three-slots
 ---
 
-# Problems with Large Broadcast Domains
+# Problems with large broadcast domains
 
 ::left::
-A problem with a large broadcast domain is that these hosts can generate excessive broadcasts and negatively affect the network.
+A problem with a large broadcast domain is that every host has to process every broadcast, even ones meant for someone else. The more hosts, the more wasted work.
 
 The solution is to reduce the size of the network to create smaller broadcast domains in a process called subnetting. 
 
@@ -295,11 +336,11 @@ Example:
 <img src="./images/l3-segmentation2.png" class="pt-10 h-50" />
 ---
 
-# Reasons for Segmenting Networks
+# Reasons for segmenting networks
 
 Subnetting reduces overall network traffic and improves network performance.
 
-It can be used to implement security policies between subnets.
+It can be used to implement security policies between subnets: putting servers, guest devices, or sensitive systems in their own subnet makes it possible to control what can talk to what, instead of everything on one flat network being able to reach everything else.
 
 Subnetting reduces the number of devices affected by abnormal broadcast traffic.
 
@@ -311,21 +352,23 @@ Subnets are used for a variety of reasons including by:
 layout: section
 ---
 
-# Variable Length Subnet Mask (VLSM)
+# Variable length subnet mask (VLSM)
 ---
 
-# Example - Topology
+# Example: topology
 
 <img src="./images/l3-subnetting-example.png" class="pt-0 pl-30 h-100" />
 ---
 
-# Example - Step 1
+# Example: step 1
 Determine the supernet range:
 <img src="./images/l3-subnetting-example1.png" class="pt-0 h-30" />
 
 <v-click>
 
-Let’s identify the subnet mask needed for each network:
+Let's identify the subnet mask needed for each network.
+- What exactly do we need room for?
+  - Every host, the router's own address on that subnet (default gateway (DGW), covered soon), the network address, the broadcast address
 - **N1** + DGW + Network Address + Broadcast = 400 + 3 = 403 => 2<sup>9</sup> => 32-9 = **/23**
 - **N2** + DGW + Network Address + Broadcast = 252 + 3 = 255 => 2<sup>8</sup> => 32-8 = **/24**
 - **N3** + DGW + Network Address + Broadcast =  63 + 3 = 66  => 2<sup>7</sup> => 32-7 = **/25**
@@ -333,31 +376,31 @@ Let’s identify the subnet mask needed for each network:
 </v-click>
 ---
 
-# Example - Step 2
+# Example: step 2
 
 Determine the N1 (400 hosts) range:
 <img src="./images/l3-subnetting-example2.png" class="pt-0 h-72" />
 ---
 
-# Example - Step 3
+# Example: step 3
 
 Determine the N2 (252 hosts) range:
 <img src="./images/l3-subnetting-example3.png" class="pt-0 h-80" />
 ---
 
-# Example - Step 4
+# Example: step 4
 
 Determine the N3 (63 hosts) range:
 <img src="./images/l3-subnetting-example4.png" class="pt-0 h-90" />
 ---
 
-# Example - Step 5
+# Example: step 5
 
 Determine the N4 (one P2P link) range:
 <img src="./images/l3-subnetting-example5.png" class="pt-0 h-90" />
 ---
 
-# Example - Summary
+# Example: summary
 | Network | Network Address | Addresses | Usable hosts | Mask | Broadcast | Host Range|
 |---------|-----------------|-----------|--------------|------|-----------|-----------|
 | N1 | 193.1.0.0/23 | 512 | 510 | 255.255.254.0 | 193.1.1.255 | 193.1.0.1 - 193.1.1.254 |
@@ -368,14 +411,14 @@ Determine the N4 (one P2P link) range:
 layout: section
 ---
 
-# How a Host Routes
+# How a host routes
 ---
 
-# Host Forwarding Decision
+# Host forwarding decision
 
 Packets are always created at the source.
 
-Each host devices creates their own routing table.
+Each host device creates their own routing table.
 
 A host can send packets to the following:
 - Itself – 127.0.0.1 (IPv4), ::1 (IPv6)
@@ -384,7 +427,7 @@ A host can send packets to the following:
 <img src="./images/l3-host-forwarding.png" class="pt-5 pl-30 h-50" />
 ---
 
-# Host Forwarding Decision
+# Host forwarding decision
 
 The Source device determines whether the destination is local or remote.
 
@@ -393,18 +436,20 @@ Method of determination:
 - IPv4 - Source uses its own IP address and Subnet mask, along with the destination IP address.
 - Ipv6 - later.
 
-Local traffic is dumped out the host interface to be handled by an intermediary device.
+Local traffic is sent directly to the destination host using its MAC address (via ARP), with no router involved.
 
-Remote traffic is forwarded directly to the default gateway on the LAN.
-<img src="./images/l3-host-forwarding.png" class="pt-5 pl-30 h-50" />
+Remote traffic is sent to the default gateway, which forwards the packet toward the destination network. Destination IP stays unchanged, but destination MAC becomes the default gateway's MAC.
+
+<img src="./images/l3-host-forwarding.png" class="pt-0 pl-30 h-40" />
 ---
 
-# Default Gateway
+# Default gateway
 
 A router or layer 3 switch can be a default-gateway.
 
 Features of a default gateway (DGW):
 
+- It must have at least two interfaces.
 - It must have an IP address in the same range as the rest of the LAN.
 - It can accept data from the LAN and is capable of forwarding traffic off of the LAN.
 - It can route to other networks.
@@ -412,27 +457,32 @@ Features of a default gateway (DGW):
 If a device has no default gateway or a bad default gateway, its traffic will not be able to leave the LAN.
 ---
 
-# A Host Routes to the Default Gateway
+# A host routes to the default gateway
 
-The host will know the default gateway (DGW) either statically or through DHCP in IPv4.
+The host will know the default gateway  either statically or through DHCP in IPv4.
 
-A DGW is static route which will be a last resort route in the routing table.
+The default gateway is the next hop of the default route in the host's routing table.
 
-All device on the LAN will need the DGW of the router if they intend to send traffic remotely.
+The default route (0.0.0.0/0) is the last-resort route: it is used when no more specific route matches the destination.
+
+All devices on the LAN need a default gateway if they intend to send traffic to remote networks.
 <img src="./images/l3-dg.png" class="pt-5 pl-40 h-60" />
 ---
 
-# Host Routing Tables (Windows Example)
+# Host routing tables: Windows example
 
-<img src="./images/l3-routing-table-pc1.png" class="pl-50 h-100" />
+Real `netstat -r` output. Notice the default route (0.0.0.0/0) and the loopback entries (127.0.0.0/8) from what we just covered, now on a real machine.
+
+
+<img src="./images/l3-routing-table-pc1.png" class="pl-50 h-90" />
 ---
 layout: section
 ---
 
-# Introduction to Routing
+# Introduction to routing
 ---
 
-# Router Packet Forwarding Decision
+# Router packet forwarding decision
 
 What happens when the router receives the frame from the host device?
 1. Packet arrives on the Gigabit Ethernet 0/0/0 interface of router R1. R1 de-encapsulates the Layer 2 Ethernet header and trailer.
@@ -441,7 +491,7 @@ What happens when the router receives the frame from the host device?
 <img src="./images/l3-forwarding.png" class="pl-0 h-50" />
 ---
 
-# Router Routing Table - Types of Routes
+# Router routing table: types of routes
 
 **Directly Connected** - These routes are automatically added by the router, provided the interface is active and has addressing.
 
@@ -449,20 +499,21 @@ What happens when the router receives the frame from the host device?
   - **Manually** - with a static route
   - **Dynamically** - by using a routing protocol to have the routers share their information with each other
 
-**Default Route** - This forwards all traffic to a specific direction when there is not a match in the routing table.
-<img src="./images/l3-routing.png" class="pt-5 pl-25 h-55" />
+**Default Route** - Same idea as the host's default route, but on the router: forwards traffic when nothing more specific matches in the table.
+<img src="./images/l3-routing.png" class="pt-1 pl-25 h-50" />
 ---
 
-# Static Routing
+# Static routing
 
 - Must be configured manually.
 - Must be adjusted manually by the administrator when there is a change in the topology.
 - Good for small non-redundant networks.
 - Often used in conjunction with a dynamic routing protocol for configuring a default route.
 <img src="./images/l3-static-routing.png" class="pl-0 h-70" />
+
 ---
 
-# Dynamic Routing
+# Dynamic routing
 
 <img src="./images/l3-dynamic-routing2.png" class="h-50 float-right" />
 
@@ -476,20 +527,38 @@ Dynamic Routes Automatically:
 Dynamic routing can also share static default routes with the other routers.
 ---
 
-# Example IPv4 Routing Table
+# Example IPv4 routing table
 
 The `show ip route` command shows the following route sources:
-  - L - Directly connected local interface IP address
-  - C - Directly connected network
-  - S - Static route was manually configured by an administrator
-  - O - OSPF, D - EIGRP
+  - L – Local route to the router's own interface IP address
+  - C – Directly connected network
+  - S - Static route, manually configured by an administrator
+  - O - OSPF, D - EIGRP (dynamic routing protocols, out of scope for this course)
 
 <img src="./images/l3-show-route-table.png" class="pt-0 pr-40 h-65 float-right" />
+---
+
+# Longest prefix matching
+
+A router picks the routing table entry with the longest matching prefix, not just any match.
+
+| Network | Prefix length | Interface |
+|---|---|---|
+| 193.1.0.0/22 | 22 | Gi0/0 |
+| 193.1.0.0/23 | 23 | Gi0/1 |
+| 193.1.3.0/25 | 25 | Gi0/2 |
+
+A packet for 193.1.0.5 matches the first two entries, /22 and /23, but not the third (that one's for a different subnet). Between the two matches, the router picks the longer one, /23, since it's the most specific match.
+
+This is also why VLSM works at all: without longest prefix matching, a router couldn't tell a host route from the network route that contains it.
+
 ---
 layout: section
 ---
 
-# ARP (Cont.)
+# ARP (cont.)
+
+Back in the link layer lecture, we promised to revisit ARP once we could route across subnets. Now we can.
 ---
 
 # Routing to another subnet: addressing
@@ -498,7 +567,7 @@ walkthrough: **sending a packet from A to B via R**
 - focus on addressing – at IP (packet) and MAC layer (frame) levels
 - assume that:
   - A knows B’s IP address
-  - A knows IP address of first hop router, R (how?)
+  - A knows IP address of first hop router, R (from DHCP or static config, as we covered earlier)
   - A knows R’s MAC address (how?)
 
 <img src="./images/l3-arp0.png" class="pt-5 h-40" />
@@ -524,10 +593,12 @@ walkthrough: **sending a packet from A to B via R**
 # Routing to another subnet: addressing
 
 - R determines outgoing interface, passes packet with IP source A, destination B to link layer 
-- R creates link-layer frame containing A-to-B IP packet. Frame destination address: B's MAC address
+- R creates link-layer frame containing A-to-B IP packet. Frame destination address: B's MAC address 
 - transmits link-layer frame
 
 <img src="./images/l3-arp3.png" class="pl-0 pt-0 h-75" />
+
+*Note: R would learn B's MAC address the same way A learned R's, via ARP, not repeated here.*
 ---
 
 # Routing to another subnet: addressing
@@ -540,7 +611,9 @@ walkthrough: **sending a packet from A to B via R**
 layout: section
 ---
 
-# Network Address Translation (NAT)
+# Network address translation (NAT)
+
+Private addresses aren't routable on the internet. NAT is how a whole private network still gets online through just one public address.
 ---
 layout: three-slots
 ---
@@ -558,15 +631,15 @@ Packets with source or destination in this network have 192.168.0.0/24 address f
 ---
 
 # NAT
-All devices in local network have 32-bit addresses in a “private” IP address space (10/8, 172.16/12, 192.168/16 prefixes) that can only be used in local network
+All devices in local network have 32-bit addresses in a **private** IP address space (10/8, 172.16/12, 192.168/16) that can only be used in local network
 advantages:
 - just one IP address needed from provider ISP for all devices
 - can change addresses of host in local network without notifying outside world
 - can change ISP without changing addresses of devices in local network
-- security: devices inside local net not directly addressable, visible by outside world
+- security: devices inside local net are not directly addressable or visible by outside world
 ---
 
-# NAT with Port Rewriting (NAPT/PAT)
+# NAT with port rewriting (NAPT/PAT)
 <div class="relative h-100">
     <img v-click src="./images/l3-nat-rewriting-port1.png" class="absolute inset-0 w-full h-full object-contain rounded-xl"/>
     <img v-click src="./images/l3-nat-rewriting-port2.png" class="absolute inset-0 w-full h-full object-contain rounded-xl"/>
@@ -575,98 +648,24 @@ advantages:
 </div>
 ---
 
-# NAT with Port Rewriting - Implementation
+# NAT with port rewriting: implementation
 
-NAT router must (transparently):
-- **outgoing packets**: replace (source IP address, port #) of every outgoing packet to (NAT IP address, new port #)
-  - remote clients/servers will respond using (NAT IP address, new port #) as destination address
-- **remember (in NAT translation table)** every (source IP address, port #)  to (NAT IP address, new port #) translation pair
-- **incoming packets:** replace (NAT IP address, new port #) in destination fields of every incoming packet with corresponding (source IP address, port #) stored in NAT table
----
-layout: section
----
+The NAT router must do all of this **transparently** (neither side of the conversation notices that translation is happening, similar to how a switch is invisible to the hosts connected to it):
 
-# What’s inside a router
+- **Outgoing packets:** replace the source IP address and source port of every outgoing packet with the NAT IP address and a new source port
+  - Remote clients/servers will send their responses to the NAT IP address and new port
+- **Remember the translation:** store each (source IP address, source port) to (NAT IP address, new port) mapping in the NAT translation table, so returning packets can be mapped back to the correct internal host and port
+- **Incoming packets:** replace the destination IP address and destination port (NAT IP address, new port) with the corresponding internal IP address and port stored in the NAT translation table
+---
+layout: default
 ---
 
-# Router architecture overview
+# Next lecture
 
-High-level view of generic router architecture:
-<img src="./images/l3-router1.png" class="pl-20 h-90" />
+- Transport Layer
+- Reliable protocol
+- UDP / TCP sockets
 
----
-
-# Input port functions
-<img src="./images/l3-router2.png" class="pl-50 h-50" />
-
-Decentralized switching:
-- using header field values, lookup output port using forwarding table in input port memory (“match plus action”)
-- goal: complete input port processing at ‘line speed’
-- input port queuing: if packets arrive faster than forwarding rate into switch fabric
-- **destination-based forwarding:** forward based only on destination IP address (traditional)
----
-
-# Longest prefix matching
-
-When looking for forwarding table entry for given destination address, use **longest address prefix that matches destination address**.
-
-| Destination Address Range | Link interface |
-|:---------------------------|:----------------:|
-|11001000  00010111  00010*** ********| 0 |
-|11001000  00010111  00011000 ********| 1 |
-|11001000  00010111  00011*** ********| 2 |
-
-Example:
-<v-click>
-11001000  00010111  00011000  10101010 which interface?
-</v-click>
-
-<v-click>
-
-**match link interface 1 and 2, but the output will be 1**
-</v-click>
----
-
-# Switching fabrics
-
-- transfer packet from input link to appropriate output link
-- switching rate: rate at which packets can be transfer from inputs to outputs
-  - often measured as multiple of input/output line rate
-  - N inputs: switching rate N times line rate desirable
-<img src="./images/l3-switching-fabric.png" class="pl-20 h-60" />
----
-
-# Input port queuing
-
-- If switch fabric slower than input ports combined -> queueing may occur at input queues 
-  - queueing delay and loss due to input buffer overflow!
-- **Head-of-the-Line (HOL) blocking:** queued datagram at front of queue prevents others in queue from moving forward
-
-<img src="./images/l3-input-port.png" class="pl-20 h-60" />
----
-
-# Output port queuing
-
-<img src="./images/l3-output-port1.png" class="pl-0 h-40" />
-
-- **Buffering** required when packets arrive from fabric faster than link transmission rate. **Drop policy:** which packets to drop if no free buffers?
-  <v-click>
-
-  - Packets can be lost due to congestion, lack of buffers
-  </v-click> 
-- **Scheduling discipline** chooses among queued packets for transmission
-  <v-click>
-
-  - Priority scheduling – who gets best performance, network neutrality
-  </v-click> 
----
-
-# Output port queuing
-
-<img src="./images/l3-output-port2.png" class="pl-40 h-60" />
-
-- buffering when arrival rate via switch exceeds output line speed
-- **queueing (delay) and loss due to output port buffer overflow!**
 ---
 
 # References
@@ -676,3 +675,4 @@ Example:
 *Some slides and figures in this presentation are adapted from Kurose & Ross course materials.  
    © 1993–2025 J.F. Kurose and K.W. Ross. All rights reserved.*
 
+Text and formatting were refined with AI assistance; all technical content was reviewed and verified by the author.
