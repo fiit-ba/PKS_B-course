@@ -296,6 +296,3 @@ def sendOnePing(mySocket, destAddr, ID):
     # Both LISTS and TUPLES consist of a number of objects
     # which can be referenced by their position number within the object.
 ```
-
-## Task 3 - Web	Server -> [External Link](https://gaia.cs.umass.edu/kurose_ross/programming/Python_code_only/WebServer_programming_lab_only.pdf)
-Submit the complete server code and screenshots of your client browser demonstrating that the HTML file contents are successfully received from the server to MS Teams.
