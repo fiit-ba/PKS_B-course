@@ -45,3 +45,4 @@ Refer to the [Slidev guides](https://sli.dev/guide/) for more commands and synta
 | 7.      | [Physical Layer](https://drive.google.com/file/d/1WpAyLmxQW320ywyJKwG5qibcqjzVzpm7/view?usp=sharing) ||
 | 8.      | [Routing](https://drive.google.com/file/d/1wGuq6ZsKdrVGZ1GD66opn0iH7Iec8tpd/view?usp=sharing) ||
 | 9.      | [Wireless](https://drive.google.com/file/d/1EsT2rmTwGRl5bYvGRDdaWGtruFjbGJXx/view?usp=sharing) ||
+| 10.      | [Security](https://drive.google.com/file/d/1wBI9QwnvuRImlqxrUyxWsl4i8nVYXlPI/view?usp=sharing) | 26.10.2026 |
