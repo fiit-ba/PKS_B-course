@@ -1,0 +1,37 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1222' height='330' viewBox='0 0 1222 330'><rect width='100%' height='100%' fill='white'/>
+<rect x='40.0' y='20.0' width='120.0' height='60.0' rx='6' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='100.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>2001</text>
+<text x='173.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>:</text>
+<rect x='186.0' y='20.0' width='120.0' height='60.0' rx='6' fill='#fecaca' stroke='#e11919' stroke-width='3'/>
+<text x='246.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='bold' fill='#e11919'>0db8</text>
+<text x='319.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>:</text>
+<rect x='332.0' y='20.0' width='120.0' height='60.0' rx='6' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='392.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>0000</text>
+<text x='465.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>:</text>
+<rect x='478.0' y='20.0' width='120.0' height='60.0' rx='6' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='538.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>1111</text>
+<text x='611.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>:</text>
+<rect x='624.0' y='20.0' width='120.0' height='60.0' rx='6' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='684.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>0000</text>
+<text x='757.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>:</text>
+<rect x='770.0' y='20.0' width='120.0' height='60.0' rx='6' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='830.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>0000</text>
+<text x='903.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>:</text>
+<rect x='916.0' y='20.0' width='120.0' height='60.0' rx='6' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='976.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>0000</text>
+<text x='1049.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>:</text>
+<rect x='1062.0' y='20.0' width='120.0' height='60.0' rx='6' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='1122.0' y='61.0' font-family='Liberation Mono, Courier New, monospace' font-size='32' text-anchor='middle' font-weight='normal' fill='#000'>0200</text>
+<text x='611.0' y='118.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' font-weight='normal' fill='#666666'>8 hextets × 16 bits = 128 bits</text>
+<rect x='609.0' y='138.0' width='4.0' height='30.0' fill='#e11919'/>
+<polygon points='600.0,166.0 622.0,166.0 611.0,182.0' fill='#e11919'/>
+<text x='416.0' y='222.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='bold' fill='#000'>0</text>
+<text x='416.0' y='260.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='normal' fill='#000'>0000</text>
+<text x='546.0' y='222.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='bold' fill='#000'>d</text>
+<text x='546.0' y='260.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='normal' fill='#000'>1101</text>
+<text x='676.0' y='222.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='bold' fill='#000'>b</text>
+<text x='676.0' y='260.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='normal' fill='#000'>1011</text>
+<text x='806.0' y='222.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='bold' fill='#000'>8</text>
+<text x='806.0' y='260.0' font-family='Liberation Mono, Courier New, monospace' font-size='30' text-anchor='middle' font-weight='normal' fill='#000'>1000</text>
+<text x='611.0' y='310.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' font-weight='normal' fill='#e11919'>1 hextet = 4 hexadecimal digits = 16 bits</text>
+</svg>

@@ -41,7 +41,7 @@ Refer to the [Slidev guides](https://sli.dev/guide/) for more commands and synta
 | 4.      | [Transport Layer - UDP, Reliability](https://drive.google.com/file/d/1VcugXjyq_d92qqqv_jayUDUziyqNRfwE/view?usp=sharing) | 12.10.2026 |
 | 4.      | [Transport Layer - TCP]() ||
 | 5.      | [Application Layer](https://drive.google.com/file/d/1oQ8kZJ_EOfg8IOpZU5dQSLWA-v9D59-o/view?usp=sharing) ||
-| 6.      | [IPv6](https://drive.google.com/file/d/1ws_x5WGXzh96zpWptOaQNdo_vrbgti5x/view?usp=sharing) ||
+| 6.      | [IPv6](https://drive.google.com/file/d/1ws_x5WGXzh96zpWptOaQNdo_vrbgti5x/view?usp=sharing) | 2.11.2026 |
 | 7.      | [Physical Layer](https://drive.google.com/file/d/1WpAyLmxQW320ywyJKwG5qibcqjzVzpm7/view?usp=sharing) ||
 | 8.      | [Routing](https://drive.google.com/file/d/1wGuq6ZsKdrVGZ1GD66opn0iH7Iec8tpd/view?usp=sharing) ||
 | 9.      | [Wireless](https://drive.google.com/file/d/1EsT2rmTwGRl5bYvGRDdaWGtruFjbGJXx/view?usp=sharing) ||

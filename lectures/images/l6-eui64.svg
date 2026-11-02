@@ -1,0 +1,94 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='976' height='630' viewBox='0 0 976 630'><rect width='100%' height='100%' fill='white'/>
+<text x='208.0' y='30.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>OUI (24 bits)</text>
+<text x='768.0' y='30.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>Device ID (24 bits)</text>
+<line x1='46.0' y1='44.0' x2='370.0' y2='44.0' stroke='#888888' stroke-width='2'/>
+<line x1='46.0' y1='44.0' x2='46.0' y2='56.0' stroke='#888888' stroke-width='2'/>
+<line x1='370.0' y1='44.0' x2='370.0' y2='56.0' stroke='#888888' stroke-width='2'/>
+<line x1='606.0' y1='44.0' x2='930.0' y2='44.0' stroke='#888888' stroke-width='2'/>
+<line x1='606.0' y1='44.0' x2='606.0' y2='56.0' stroke='#888888' stroke-width='2'/>
+<line x1='930.0' y1='44.0' x2='930.0' y2='56.0' stroke='#888888' stroke-width='2'/>
+<text x='488.0' y='96.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' font-weight='bold' fill='#000' xml:space='preserve'>MAC</text>
+<rect x='40.0' y='66.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='96.0' y='97.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>3C</text>
+<rect x='152.0' y='66.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='208.0' y='97.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>7C</text>
+<rect x='264.0' y='66.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='320.0' y='97.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>91</text>
+<rect x='600.0' y='66.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='656.0' y='97.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>BF</text>
+<rect x='712.0' y='66.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='768.0' y='97.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>2E</text>
+<rect x='824.0' y='66.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='880.0' y='97.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>44</text>
+<text x='40.0' y='170.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' font-weight='bold' fill='#000' xml:space='preserve'>Step 1: split the MAC address in half</text>
+<rect x='40.0' y='184.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='96.0' y='213.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0011 1100</text>
+<rect x='152.0' y='184.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='208.0' y='213.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0111 1100</text>
+<rect x='264.0' y='184.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='320.0' y='213.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1001 0001</text>
+<rect x='600.0' y='184.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='656.0' y='213.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1011 1111</text>
+<rect x='712.0' y='184.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='768.0' y='213.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0010 1110</text>
+<rect x='824.0' y='184.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='880.0' y='213.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0100 0100</text>
+<text x='40.0' y='270.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' font-weight='bold' fill='#000' xml:space='preserve'>Step 2: insert FFFE in the middle</text>
+<rect x='40.0' y='284.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<rect x='122.0' y='293.0' width='12.8' height='28.0' fill='#fecaca' stroke='#e11919' stroke-width='1.5'/>
+<text x='96.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0011 1100</text>
+<rect x='152.0' y='284.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='208.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0111 1100</text>
+<rect x='264.0' y='284.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='320.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1001 0001</text>
+<rect x='376.0' y='284.0' width='112.0' height='46.0' fill='#d5e8d4' stroke='#888888' stroke-width='2'/>
+<text x='432.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1111 1111</text>
+<rect x='488.0' y='284.0' width='112.0' height='46.0' fill='#d5e8d4' stroke='#888888' stroke-width='2'/>
+<text x='544.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1111 1110</text>
+<rect x='600.0' y='284.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='656.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1011 1111</text>
+<rect x='712.0' y='284.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='768.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0010 1110</text>
+<rect x='824.0' y='284.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='880.0' y='313.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0100 0100</text>
+<text x='40.0' y='370.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' font-weight='bold' fill='#000' xml:space='preserve'>Step 3: flip the 7th bit (U/L)</text>
+<rect x='40.0' y='384.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<rect x='122.0' y='393.0' width='12.8' height='28.0' fill='#fecaca' stroke='#e11919' stroke-width='1.5'/>
+<text x='96.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0011 1110</text>
+<rect x='152.0' y='384.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='208.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0111 1100</text>
+<rect x='264.0' y='384.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='320.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1001 0001</text>
+<rect x='376.0' y='384.0' width='112.0' height='46.0' fill='#d5e8d4' stroke='#888888' stroke-width='2'/>
+<text x='432.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1111 1111</text>
+<rect x='488.0' y='384.0' width='112.0' height='46.0' fill='#d5e8d4' stroke='#888888' stroke-width='2'/>
+<text x='544.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1111 1110</text>
+<rect x='600.0' y='384.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='656.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>1011 1111</text>
+<rect x='712.0' y='384.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='768.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0010 1110</text>
+<rect x='824.0' y='384.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='880.0' y='413.0' font-family='Liberation Mono, Courier New, monospace' font-size='18' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>0100 0100</text>
+<text x='40.0' y='470.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' font-weight='bold' fill='#000' xml:space='preserve'>Result: Modified EUI-64 interface ID</text>
+<rect x='40.0' y='484.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<rect x='70.0' y='492.0' width='52.0' height='30.0' fill='#fecaca' stroke='#e11919' stroke-width='1.5'/>
+<text x='96.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='bold' fill='#e11919' xml:space='preserve'>3E</text>
+<rect x='152.0' y='484.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='208.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>7C</text>
+<rect x='264.0' y='484.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='320.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>91</text>
+<rect x='376.0' y='484.0' width='112.0' height='46.0' fill='#d5e8d4' stroke='#888888' stroke-width='2'/>
+<text x='432.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>FF</text>
+<rect x='488.0' y='484.0' width='112.0' height='46.0' fill='#d5e8d4' stroke='#888888' stroke-width='2'/>
+<text x='544.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>FE</text>
+<rect x='600.0' y='484.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='656.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>BF</text>
+<rect x='712.0' y='484.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='768.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>2E</text>
+<rect x='824.0' y='484.0' width='112.0' height='46.0' fill='white' stroke='#888888' stroke-width='2'/>
+<text x='880.0' y='515.0' font-family='Liberation Mono, Courier New, monospace' font-size='24' text-anchor='middle' font-weight='normal' fill='#000' xml:space='preserve'>44</text>
+<text x='40.0' y='575.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' font-weight='normal' fill='#000' xml:space='preserve'>Interface ID:</text>
+<text x='190.0' y='575.0' font-family='Liberation Mono, Courier New, monospace' font-size='22' text-anchor='start' font-weight='normal' fill='#000' xml:space='preserve'>3e7c:91ff:febf:2e44</text>
+<text x='40.0' y='610.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' font-weight='normal' fill='#000' xml:space='preserve'>Link-local:</text>
+<text x='190.0' y='610.0' font-family='Liberation Mono, Courier New, monospace' font-size='22' text-anchor='start' font-weight='normal' fill='#000' xml:space='preserve'>fe80::3e7c:91ff:febf:2e44</text>
+</svg>
