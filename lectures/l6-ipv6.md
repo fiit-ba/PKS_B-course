@@ -404,7 +404,7 @@ The default gateway always comes from RA: it is the router's link-local address.
 
 # Global address: the messages
 
-<img src="./images/pks-l6-slaac.png" class="h-100 mx-auto" />
+<img src="./images/l6-slaac.png" class="h-100 mx-auto" />
 
 ---
 
