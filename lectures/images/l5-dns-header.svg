@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1340' height='526' viewBox='0 0 1340 526'><rect width='100%' height='100%' fill='white'/>
+<line x1='50' y1='58' x2='1290' y2='58' stroke='#888888' stroke-width='2'/>
+<line x1='50' y1='40' x2='50' y2='76' stroke='#888888' stroke-width='2'/>
+<line x1='670.0' y1='40' x2='670.0' y2='76' stroke='#888888' stroke-width='2'/>
+<line x1='1290' y1='40' x2='1290' y2='76' stroke='#888888' stroke-width='2'/>
+<text x='50.0' y='32.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' fill='#000'>bit 0</text>
+<text x='666.0' y='32.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='end' fill='#000'>bit 7</text>
+<text x='674.0' y='32.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='start' fill='#000'>bit 8</text>
+<text x='1290.0' y='32.0' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='end' fill='#000'>bit 15</text>
+<rect x='50.0' y='100.0' width='1240.0' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='670.0' y='137.1' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' fill='#000'>ID (16)</text>
+<rect x='50.0' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='88.8' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>QR</text>
+<rect x='127.5' y='156.0' width='310.0' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='282.5' y='193.1' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' fill='#000'>Opcode (4)</text>
+<rect x='437.5' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='476.2' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>AA</text>
+<rect x='515.0' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='553.8' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>TC</text>
+<rect x='592.5' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='631.2' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>RD</text>
+<rect x='670.0' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='708.8' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>RA</text>
+<rect x='747.5' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='786.2' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>Z</text>
+<rect x='825.0' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='863.8' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>AD</text>
+<rect x='902.5' y='156.0' width='77.5' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='941.2' y='191.7' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='22' text-anchor='middle' fill='#000'>CD</text>
+<rect x='980.0' y='156.0' width='310.0' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='1135.0' y='193.1' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' fill='#000'>RCODE (4)</text>
+<rect x='50.0' y='212.0' width='1240.0' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='670.0' y='249.1' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' fill='#000'>QDCOUNT (16): number of questions</text>
+<rect x='50.0' y='268.0' width='1240.0' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='670.0' y='305.1' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' fill='#000'>ANCOUNT (16): number of answer records</text>
+<rect x='50.0' y='324.0' width='1240.0' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='670.0' y='361.1' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' fill='#000'>NSCOUNT (16): number of authority records</text>
+<rect x='50.0' y='380.0' width='1240.0' height='56' fill='white' stroke='#888888' stroke-width='2'/><text x='670.0' y='417.1' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='26' text-anchor='middle' fill='#000'>ARCOUNT (16): number of additional records</text>
+<rect x='50.0' y='460.0' width='1240.0' height='56' fill='white' stroke='#888888' stroke-width='2' stroke-dasharray='10,6'/><text x='670.0' y='496.4' font-family='Liberation Sans, Arial, Helvetica, sans-serif' font-size='24' text-anchor='middle' fill='#000'>message body: Question, Answer, Authority, Additional (variable length)</text>
+</svg>
