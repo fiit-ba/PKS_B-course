@@ -39,7 +39,7 @@ Refer to the [Slidev guides](https://sli.dev/guide/) for more commands and synta
 | 2.      | [Link Layer](https://drive.google.com/file/d/1WeEqdBZupquEd-YRI6J-2u9fm1tZZ1ra/view?usp=sharing) | 21.9.2026 |
 | 3.      | [Network Layer](https://drive.google.com/file/d/12D9ZqFXC41kNH9gF8lWH3jCmselxi3f2/view?usp=sharing) | 5.10.2026 |
 | 4.      | [Transport Layer - UDP, Reliability](https://drive.google.com/file/d/1VcugXjyq_d92qqqv_jayUDUziyqNRfwE/view?usp=sharing) | 12.10.2026 |
-| 4.      | [Transport Layer - TCP]() | 19.11.2026 |
+| 4.      | [Transport Layer - TCP](https://drive.google.com/file/d/11oEvM-kAzVQsgzgRa0d2lCgHCQXNctbA/view?usp=sharing) | 19.11.2026 |
 | 5.      | [Application Layer](https://drive.google.com/file/d/1oQ8kZJ_EOfg8IOpZU5dQSLWA-v9D59-o/view?usp=sharing) | 19.11.2026 |
 | 6.      | [IPv6](https://drive.google.com/file/d/1ws_x5WGXzh96zpWptOaQNdo_vrbgti5x/view?usp=sharing) | 2.11.2026 |
 | 7.      | [Physical Layer](https://drive.google.com/file/d/1WpAyLmxQW320ywyJKwG5qibcqjzVzpm7/view?usp=sharing) ||
