@@ -26,8 +26,6 @@ Lecture 4
 layout: default
 ---
 
-<!-- note: Variant (b) – smoother narrative than one-to-one slide translation. Some original bullet points merged or clarified. -->
-
 # TCP — Transmission Control Protocol
 
 A practical, technical introduction to the transport layer with focus on TCP: connection establishment and teardown, reliable byte-stream delivery, timers and retransmissions, flow and congestion control, and selected extensions such as ECN and SACK.
@@ -42,8 +40,6 @@ Transport provides **end-to-end** services on top of the network layer. It offer
 
 
 <img src="./images/l1-osi.png" class="pt-5 h-90" />
-
-<!-- note: OSI Application/Presentation/Session ≈ TCP/IP Application; Network ≈ Internet; Data Link + Physical ≈ Link. -->
 
 ---
 
@@ -690,8 +686,6 @@ layout: default
 - Sequence numbers advance by bytes sent; ACK number = next expected byte.  
 - After data exchange, teardown proceeds via FIN/ACK handshake and TIME-WAIT.
 
-<!-- note: Connect to the earlier Slovak slide: SN=111, ACK transitions, three 1500B data segments. -->
-
 ---
 layout: default
 ---
@@ -715,5 +709,3 @@ layout: default
 - RFC 3168: The Addition of ECN to IP — 2001 (ECN semantics).  
 - Stevens et al., TCP/IP Illustrated, Vol. 1.  
 - IETF/TCPM WG drafts on modern congestion control (CUBIC, BBR) — background only.
-
-<!-- note: External sources not strictly required for this lecture; the above are authoritative references. -->
